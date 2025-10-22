@@ -59,17 +59,29 @@ Follow the steps below to set up and run the backend locally:
 ------------------------------
 
 ```
-backend/
+/
 │
 ├── src/
-│   ├── config/
+│   ├── app.js
 │   ├── controllers/
+│   │   ├── auth.controllers.js
+│   │   └── post.controllers.js
+│   ├── db/
+│   │   └── db.js
+│   ├── middlewares/
+│   │   └── auth.middleware.js
 │   ├── models/
+│   │   ├── post.model.js
+│   │   └── user.model.js
 │   ├── routes/
-│   └── utils/
+│   │   ├── auth.routes.js
+│   │   └── post.routes.js
+│   └── services/
+│       ├── ai.service.js
+│       └── storage.service.js
 │
-├── .env
 ├── package.json
+├── readme.md
 └── server.js
 ```
 
