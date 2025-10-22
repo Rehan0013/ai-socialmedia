@@ -15,7 +15,6 @@ async function generateCaption(base64ImageFile) {
     },
   ];
 
-  try {
     const response = await ai.models.generateContent({
       model: "gemini-2.5-flash",
       contents: contents,
@@ -29,10 +28,6 @@ async function generateCaption(base64ImageFile) {
       },
     });
     return response.text;
-  } catch (error) {
-    console.error("Error generating caption:", error);
-    throw new Error("Failed to generate caption");
-  }
 }
 
 module.exports = generateCaption;
